@@ -31,7 +31,7 @@ class main_window:
                     * np.exp(-2 * np.pi * 1j * ((self.x_axis - self.shift) / self.scale)))    # cshannon equation
         return np.real(cshannon), np.imag(cshannon), "C.Shannon"
 
-    def win_cpoisson(self):   # complex shannon wavelet
+    def win_cpoisson(self):   # complex poisson wavelet
         n = 4
         cpoisson = (1 / (2 * np.pi)) * ((1 - (1j * ((self.x_axis - self.shift) / self.scale))) ** (-1 * (n + 1)))   # cpoisson equation
         return np.real(cpoisson), np.imag(cpoisson), "C.Shannon"
